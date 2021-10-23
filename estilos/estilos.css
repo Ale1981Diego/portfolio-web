@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 50%;
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
+    width: 100%;
 }
 
 /* header  */
@@ -96,7 +101,7 @@ header nav a:hover {
 main {
     width: 100%;
     height: auto;
-    margin:0;
+    margin:0 0 2em 0;
     position: relative;
 }
 
@@ -254,7 +259,7 @@ main {
 .portafolio {
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    padding: 1em;
     height: auto;
     color: #333;
 }
@@ -263,9 +268,18 @@ main {
     font-size: 2em;
 }
 
-.portafolio div {
-    width: 100%;
-    margin: 1em;
+.portafolio .div-flex {
+    padding: 1em;
+}
+
+.portafolio .portafolio-flex div .div-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portafolio .portafolio-flex div .div-video .div-video-p {
+    margin-top: 1em;
 }
 
 /* footer */
@@ -313,7 +327,7 @@ main {
 
 }
 
-#contactos div a .fa-at, .fa-whatsapp, .fa-linkedin {
+#contactos div a .fa-at, .fa-whatsapp, .fa-linkedin, .fa-github-square {
     color: #fff;
     font-size: 3em;
 }
@@ -322,7 +336,23 @@ main {
     color:#264de4;
 }
 
+#contactos .div-flex .contacto-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactos .div-flex .contacto-redes p {
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
 @media (min-width: 768px) {
+
+    .sobre-mi, .portafolio {
+        width: 80%;
+        margin: 0 auto;
+    }
 
     .sobre-mi .div-habilidades .grid {
         display: grid;
@@ -341,6 +371,28 @@ main {
         justify-content: left;
     }
 
+    .portafolio .portafolio-flex div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portafolio .portafolio-flex div .div-video {
+        align-items: flex-start;
+    }
+
+    .portafolio .portafolio-flex div .div-video video {
+        padding-left: 1em;
+    }
+
+    .portafolio .portafolio-flex div .div-video p{
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    #contactos .div-flex .contacto-redes p {
+        font-size: 1.1em;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -399,11 +451,14 @@ main {
         height: 15em;
         margin-right: 1em;
     }
+
+    .sobre-mi, .portafolio {
+        margin: 0 auto;
+    }
     
     .sobre-mi {
         flex-direction: row;
         justify-content: space-around;
-        margin: 0 2em;
     }
 
     .sobre-mi .div-sobre-mi {
@@ -444,7 +499,6 @@ main {
 
     .portafolio {
         padding: 1em;
-        margin: 0 2em;
     }
 
     .portafolio h2 {
