@@ -125,10 +125,16 @@ main {
     left: 0;
 }
 
-.home .miFoto, .miFoto img{
+.home .miFoto{
     width: 20em;
     height: 20em;
-    border-radius: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.miFoto img {
+    width: 20em;
+    height: auto;
 }
 
 .home .nombre {
